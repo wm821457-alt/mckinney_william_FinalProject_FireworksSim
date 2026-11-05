@@ -1,8 +1,7 @@
 # mckinney_william_FinalProject_FireworksSim
 
-
 ## Repository
-<Link to your project's public GitHub respository>
+(https://github.com/wm821457-alt/mckinney_william_FinalProject_FireworksSim.git)
 
 ## Description
 Using Pygame similar to the last digital rain assignment I will display an interactive Firework Simulator. User's will be able to click anywhere on the screen and create different colored explosions that will shoot out and disappear after.  
