@@ -1,1 +1,0 @@
-# mckinney_william_FinalProject_FireworksSim
