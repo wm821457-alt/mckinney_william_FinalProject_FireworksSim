@@ -52,4 +52,20 @@ class Particle():
             (int(self.pos[0] - self.size),
              int(self.pos[1] - self.size))
         )
-        
+
+
+class Firework():
+
+    def __init__(self, pos):
+        self.pos = pos
+        self.particles = []
+
+        colors = [
+            (255, 0, 0),
+            (255, 200, 0),
+            (0, 200, 255),
+            (200, 0, 255),
+            (0, 255, 100)
+        ]
+
+        self.color = random.choice(colors)
