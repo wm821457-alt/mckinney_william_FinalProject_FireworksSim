@@ -39,4 +39,17 @@ class Particle():
             (self.size * 2, self.size * 2),
             pygame.SRCALPHA
         )
+
+        pygame.draw.circle(
+            particle_surface,
+            (*self.color[:3], int(self.alpha)),
+            (self.size, self.size),
+            self.size
+        )
+
+        surface.blit(
+            particle_surface,
+            (int(self.pos[0] - self.size),
+             int(self.pos[1] - self.size))
+        )
         
