@@ -30,3 +30,13 @@ class Particle():
             self.dead = True
 
         self.alpha = 255 * (1 - self.age / self.life)
+
+    def draw(self, surface):
+        if self.dead:
+            return
+
+        particle_surface = pygame.Surface(
+            (self.size * 2, self.size * 2),
+            pygame.SRCALPHA
+        )
+        
