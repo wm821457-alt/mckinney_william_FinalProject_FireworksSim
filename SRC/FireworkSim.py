@@ -111,3 +111,18 @@ class Fireworks():
 
     def clear(self):
         self.fireworks = []
+
+
+def main():
+    pygame.init()
+
+    pygame.display.set_caption("Interactive Fireworks Simulator")
+
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    clock = pygame.time.Clock()
+
+    fireworks = Fireworks()
+
+    running = True
+
+    
