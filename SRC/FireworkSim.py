@@ -14,3 +14,12 @@ class Particle():
 
         self.dx = math.cos(self.angle) * self.speed
         self.dy = math.sin(self.angle) * self.speed
+
+        self.life = 100
+        self.age = 0
+        self.alpha = 255
+        self.dead = False
+
+    def update(self):
+        self.pos[0] += self.dx
+        self.pos[1] += self.dy
