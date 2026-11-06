@@ -23,3 +23,10 @@ class Particle():
     def update(self):
         self.pos[0] += self.dx
         self.pos[1] += self.dy
+
+        self.age += 1
+
+        if self.age >= self.life:
+            self.dead = True
+
+        self.alpha = 255 * (1 - self.age / self.life)
