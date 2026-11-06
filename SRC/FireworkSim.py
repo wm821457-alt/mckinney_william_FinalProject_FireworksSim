@@ -143,3 +143,21 @@ def main():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 fireworks.add_firework(event.pos)
+
+        # Game Logic
+        fireworks.update()
+
+        # Draw everything
+        screen.fill((0, 0, 0,))
+
+        fireworks.draw(screen)
+
+        pygame.display.flip()
+
+        clock.tick(60)
+
+    pygame.quit()
+
+
+if __name__ == "__main__":
+    main()
