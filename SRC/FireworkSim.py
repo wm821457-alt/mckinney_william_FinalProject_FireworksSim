@@ -69,3 +69,15 @@ class Firework():
         ]
 
         self.color = random.choice(colors)
+        for count in range(40):
+            particle = Particle(self.pos, self.color)
+            self.particles.append(particle)
+
+    def update(self):
+        for particle in self.particles:
+            particle.update()
+
+        self.particles = [
+            particle for particle in self.particles
+            if not particle.dead
+        ]
