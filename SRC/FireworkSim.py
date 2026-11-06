@@ -99,3 +99,15 @@ class Fireworks():
     def update(self):
         for firework in self.fireworks:
             firework.update()
+
+        self.fireworks = [
+            firework for firework in self.fireworks
+            if len(firework.particles) > 0
+        ]
+
+    def draw(self, surface):
+        for firework in self.fireworks:
+            firework.draw(surface)
+
+    def clear(self):
+        self.fireworks = []
