@@ -81,3 +81,21 @@ class Firework():
             particle for particle in self.particles
             if not particle.dead
         ]
+
+    def draw(self, surface):
+        for particle in self.particles:
+            particle.draw(surface)
+
+
+class Fireworks():
+
+    def __init__(self):
+        self.fireworks = []
+
+    def add_firework(self, pos):
+        firework = Firework(pos)
+        self.fireworks.append(firework)
+
+    def update(self):
+        for firework in self.fireworks:
+            firework.update()
