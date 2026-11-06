@@ -125,4 +125,21 @@ def main():
 
     running = True
 
-    
+    while running:
+
+        # Event loop
+        for event in pygame.event.get():
+
+            if event.type == pygame.QUIT:
+                running = False
+
+            if event.type == pygame.KEYDOWN:
+
+                if event.key == pygame.K_ESCAPE:
+                    running = False
+
+                if event.key == pygame.K_c:
+                    fireworks.clear()
+
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                fireworks.add_firework(event.pos)
